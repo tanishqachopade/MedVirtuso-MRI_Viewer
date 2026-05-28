@@ -6135,6 +6135,7 @@ begin
        len := diffMM.length;
        str := str + format('%0.4g×%0.4g×%0.4g -> %0.4g×%0.4g×%0.4g  = %0.4g', [sliceMM.x, sliceMM.y, sliceMM.z, endMM.x, endMM.y, endMM.z, len]);
        caption := str;
+      Caption := 'MedVirtuso - MedMarvel Software Solutions';
        if (niftiVol.volumesLoaded = 1) then
        		SampleAlongLine(sliceMM, endMM);
        exit;
@@ -6149,7 +6150,7 @@ begin
             if not vols.Layer(i,niftiVol) then exit;
             str := str + '; ' + niftiVol.VoxIntensityString(vox);
         end;
-     caption := str;
+     Caption := 'MedVirtuso - MedMarvel Software Solutions';
 end;
 
 procedure TGLForm1.SampleAlongLine (startMM, endMM: TVec3);
