@@ -403,6 +403,7 @@ type
     X2TrackBar: TTrackBar;
     YTrackBar: TTrackBar;
     ZTrackBar: TTrackBar;
+   
     procedure AfniPMenuClick(Sender: TObject);
     procedure AfniQMenuClick(Sender: TObject);
     procedure CenterPanelClick(Sender: TObject);
@@ -6974,9 +6975,16 @@ begin
   {$ENDIF}
 end;
 
+
 procedure TGLForm1.MenuItem2Click(Sender: TObject);
 begin
-  ShowMessage('MedVirtuso-MedMarvel Software Solutions');
+  ShowMessage(
+    'MedVirtuso: MedMarvel Software Solutions' + LineEnding + LineEnding +
+    'Version 1.0' + LineEnding + LineEnding +
+
+    
+    '© 2026 MedMarvel Software Solutions'
+  );
 end;
 
 procedure TGLForm1.MenuItem3Click(Sender: TObject);
@@ -9903,6 +9911,23 @@ begin
  {$ENDIF}
  Vol1 := TGPUVolume.Create(ViewGPU1);
  {$ENDIF}
+
+ LayerDarkLabel.Visible := False;
+LayerDarkEdit.Visible := False;
+
+LayerBrightLabel.Visible := False;
+LayerBrightEdit.Visible := False;
+
+SliceBox.Visible := False;
+
+CoordLabel.Visible := False;
+XCoordEdit.Visible := False;
+YCoordEdit.Visible := False;
+ZCoordEdit.Visible := False;
+
+
+
+
 end;
 
 function TGLForm1.DefaultImage():string;
@@ -9939,6 +9964,7 @@ var
  shaderNames : TStringList;
  newMenu: TMenuItem;
 begin
+
  {$IFDEF LCLGTK2}{$IFDEF LINUX}
  writeln('If there is a long delay at launch, ensure full GTK2 install: "sudo apt-get install appmenu-gtk2-module"');
  {$ENDIF}{$ENDIF}
@@ -10260,6 +10286,11 @@ begin
   SetDisplayCheck();
   UpdateLayerBox(true);
   UpdateVisibleBoxes();
+
+  gPrefs.LabelOrient := false;
+  TextAndCubeMenu.Checked := false;
+
+
   UpdateOpenRecent();
   {$IFDEF METALAPI}
   if gPrefs.Quality1to5 = 5 then
@@ -10270,6 +10301,10 @@ begin
   if gPrefs.InitScript <> '' then
      UpdateTimer.Enabled:=true;
   ViewGPUPrepare(Sender);
+
+  Vol1.Slices.LabelOrient := false;
+
+
   {$ENDIF}
   if gPrefs.InitScript = '' then begin //update graph and caption
     XCoordEdit.Text := '0';
@@ -10277,6 +10312,34 @@ begin
     ZCoordEdit.Text := '0';
     SetXHairPosition(0,0,0 );
   end;
+
+// ===== MedVirtuso UI Cleanup =====
+
+// Hide contrast controls
+LayerDarkLabel.Visible := False;
+LayerDarkEdit.Visible := False;
+
+LayerBrightLabel.Visible := False;
+LayerBrightEdit.Visible := False;
+
+// Hide coordinate display
+CoordLabel.Visible := False;
+XCoordEdit.Visible := False;
+YCoordEdit.Visible := False;
+ZCoordEdit.Visible := False;
+
+// Hide 2D slice orientation buttons only
+SliceABtn.Visible := False;
+SlicePBtn.Visible := False;
+SliceLBtn.Visible := False;
+SliceRBtn.Visible := False;
+SliceSBtn.Visible := False;
+SliceIBtn.Visible := False;
+
+// Keep zoom controls visible
+ZoomBtn.Visible := True;
+SliceZoom.Visible := True;
+
   SetToolPanelMaxWidth();
   {$IFDEF METALAPI}
   //isFormShown := true;
@@ -10316,7 +10379,7 @@ begin
   UpdateColorbar();
   Vol1.SetTextContrast(gPrefs.ClearColor);
   Vol1.Slices.RadiologicalConvention := gPrefs.FlipLR_Radiological;
-  Vol1.Slices.LabelOrient := gPrefs.LabelOrient;
+  Vol1.Slices.LabelOrient := false;
   Vol1.Quality1to5 := gPrefs.Quality1to5;
   Vol1.Slices.LineWidth := gPrefs.LineWidth;
   Vol1.Slices.LineColor := Vec4(gPrefs.LineColor.R/255.0, gPrefs.LineColor.G/255.0, gPrefs.LineColor.B/255.0, gPrefs.LineColor.A/255.0);
