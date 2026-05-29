@@ -10349,6 +10349,14 @@ SliceIBtn.Visible := False;
 ZoomBtn.Visible := True;
 SliceZoom.Visible := True;
 
+with TLabel.Create(Self) do
+begin
+  Parent := RulerCheck.Parent;
+  Left := 30;
+  Top := RulerCheck.Top + 500;
+  Caption := 'NOT FOR CLINICAL USE';
+end;
+
   SetToolPanelMaxWidth();
   {$IFDEF METALAPI}
   //isFormShown := true;

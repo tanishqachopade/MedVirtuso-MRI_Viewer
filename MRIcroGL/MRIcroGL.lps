@@ -7,7 +7,6 @@
       <Unit0>
         <Filename Value="MRIcroGL.lpr"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
         <CursorPos X="10"/>
         <UsageCount Value="200"/>
@@ -19,6 +18,7 @@
         <ComponentName Value="GLForm1"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
         <TopLine Value="6968"/>
         <CursorPos X="55" Y="6978"/>
         <UsageCount Value="204"/>
