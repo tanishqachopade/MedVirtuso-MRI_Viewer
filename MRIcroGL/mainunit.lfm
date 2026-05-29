@@ -2626,11 +2626,12 @@ object GLForm1: TGLForm1
       end
     end
     object MenuItem2: TMenuItem
-      Caption = 'AboutUs'
+      Caption = 'About Us'
       OnClick = MenuItem2Click
     end
     object MenuItem3: TMenuItem
-      Caption = 'Licence'
+      Caption = 'License'
+      OnClick = LicenseMenuClick
     end
   end
   object OpenDialog1: TOpenDialog

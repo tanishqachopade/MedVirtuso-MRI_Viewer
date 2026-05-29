@@ -403,6 +403,8 @@ type
     X2TrackBar: TTrackBar;
     YTrackBar: TTrackBar;
     ZTrackBar: TTrackBar;
+
+    procedure LicenseMenuClick(Sender: TObject);
    
     procedure AfniPMenuClick(Sender: TObject);
     procedure AfniQMenuClick(Sender: TObject);
@@ -6986,6 +6988,13 @@ begin
     '© 2026 MedMarvel Software Solutions'
   );
 end;
+
+procedure TGLForm1.LicenseMenuClick(Sender: TObject);
+begin
+  OpenURL('https://github.com/rordenlab/MRIcroGL?tab=License-1-ov-file');
+end;
+
+
 
 procedure TGLForm1.MenuItem3Click(Sender: TObject);
 begin
