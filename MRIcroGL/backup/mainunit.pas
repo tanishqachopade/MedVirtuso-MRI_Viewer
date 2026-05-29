@@ -271,7 +271,6 @@ type
     RemoveHazeMenu: TMenuItem;
     OpenRecentMenu: TMenuItem;
     MosLabelCheck: TCheckBox;
-    ClinicalUseLabel: TMemo;
     MosCrossCheck: TCheckBox;
     MosOrientDrop: TComboBox;
     CutNearBtn: TButton;
@@ -403,8 +402,6 @@ type
     X2TrackBar: TTrackBar;
     YTrackBar: TTrackBar;
     ZTrackBar: TTrackBar;
-
-    procedure LicenseMenuClick(Sender: TObject);
    
     procedure AfniPMenuClick(Sender: TObject);
     procedure AfniQMenuClick(Sender: TObject);
@@ -584,7 +581,6 @@ type
     procedure LineColorBtnClick(Sender: TObject);
     //procedure LineColorOpacityTrackChange(Sender: TObject);
     procedure LineWidthEditChange(Sender: TObject);
-    procedure ClinicalUseLabelChange(Sender: TObject);
     procedure OrientBtnClick(Sender: TObject);
     procedure RemoveHazeMenuClick(Sender: TObject);
     procedure ScriptingNewMenuClick(Sender: TObject);
@@ -4777,12 +4773,6 @@ begin
   ViewGPU1.Invalidate;
 end;
 
-procedure TGLForm1.ClinicalUseLabelChange(Sender: TObject);
-begin
-     gPrefs.MosaicStr := ClinicalUseLabel.Text;
-     ViewGPU1.Invalidate;
-end;
-
 function lerpFraction (frac: single; min,max: single): integer;
 var
   f: single;
@@ -4880,7 +4870,6 @@ for lRi := 1 to lR do begin
  if lRi < lR then
    lStr := lStr +'; ';
 end;//for each row
-ClinicalUseLabel.Text := lStr;
 gPrefs.MosaicStr := lStr;
 ViewGPU1.Invalidate;
 end;
@@ -6989,10 +6978,6 @@ begin
   );
 end;
 
-procedure TGLForm1.LicenseMenuClick(Sender: TObject);
-begin
-  OpenURL('https://github.com/rordenlab/MRIcroGL?tab=License-1-ov-file');
-end;
 
 
 

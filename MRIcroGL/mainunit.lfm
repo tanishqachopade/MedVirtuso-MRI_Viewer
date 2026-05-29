@@ -401,7 +401,7 @@ object GLForm1: TGLForm1
       object ShaderBox: TGroupBox
         Left = 0
         Height = 489
-        Top = 1151
+        Top = 1067
         Width = 314
         Align = alClient
         AutoSize = True
@@ -978,7 +978,7 @@ object GLForm1: TGLForm1
       object SliceBox: TGroupBox
         Left = 0
         Height = 245
-        Top = 906
+        Top = 822
         Width = 314
         Align = alTop
         AutoSize = True
@@ -1234,7 +1234,7 @@ object GLForm1: TGLForm1
       object CutoutBox: TGroupBox
         Left = 0
         Height = 145
-        Top = 761
+        Top = 677
         Width = 314
         Align = alTop
         AutoSize = True
@@ -1416,13 +1416,13 @@ object GLForm1: TGLForm1
       end
       object MosaicBox: TGroupBox
         Left = 0
-        Height = 230
+        Height = 146
         Top = 531
         Width = 314
         Align = alTop
         AutoSize = True
         Caption = 'Mosaic'
-        ClientHeight = 205
+        ClientHeight = 121
         ClientWidth = 310
         Constraints.MinWidth = 12
         ParentFont = False
@@ -1587,26 +1587,6 @@ object GLForm1: TGLForm1
           State = cbChecked
           TabOrder = 6
           OnChange = UpdateMosaic
-        end
-        object ClinicalUseLabel: TMemo
-          AnchorSideLeft.Control = MosaicBox
-          AnchorSideTop.Control = MosCrossCheck
-          AnchorSideTop.Side = asrBottom
-          AnchorSideRight.Control = MosaicBox
-          AnchorSideRight.Side = asrBottom
-          Left = 0
-          Height = 82
-          Top = 123
-          Width = 310
-          Anchors = [akTop, akLeft, akRight]
-          BorderSpacing.Top = 2
-          Constraints.MaxHeight = 82
-          Lines.Strings = (
-            'NOT FOR CLINICAL USE'
-          )
-          ParentFont = False
-          TabOrder = 7
-          OnChange = ClinicalUseLabelChange
         end
       end
     end
@@ -1874,6 +1854,7 @@ object GLForm1: TGLForm1
       object OpenAFNIMenu: TMenuItem
         Tag = 2
         Caption = 'Open AFNI'
+        Visible = False
         object AfniDirMenu: TMenuItem
           Caption = 'Set AFNI Folder...'
           OnClick = AfniDirMenuClick
@@ -1881,6 +1862,7 @@ object GLForm1: TGLForm1
       end
       object OpenFSLMenu: TMenuItem
         Caption = 'Open FSL'
+        Visible = False
         OnClick = OpenFSLMenuClick
       end
       object DicomDirMenu: TMenuItem
@@ -1890,6 +1872,7 @@ object GLForm1: TGLForm1
       object OpenAltasMenu: TMenuItem
         Tag = 1
         Caption = 'Add Atlas'
+        Visible = False
       end
       object AddOverlayMenu: TMenuItem
         Caption = 'Add Overlay'
@@ -2505,6 +2488,7 @@ object GLForm1: TGLForm1
     end
     object ColorMenu: TMenuItem
       Caption = 'Color'
+      Visible = False
       object BackColorMenu: TMenuItem
         Caption = 'Back Color'
         OnClick = BackColorMenuClick
@@ -2630,10 +2614,6 @@ object GLForm1: TGLForm1
     object MenuItem2: TMenuItem
       Caption = 'About Us'
       OnClick = MenuItem2Click
-    end
-    object LicenseMenuClick: TMenuItem
-      Caption = 'License'
-      OnClick = LicenseMenuClick
     end
   end
   object OpenDialog1: TOpenDialog
