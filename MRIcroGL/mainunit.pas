@@ -10345,7 +10345,7 @@ begin
   Parent := RulerCheck.Parent;
   Left := 30;
   Top := RulerCheck.Top + 500;
-  Caption := 'NOT FOR CLINICAL USE';
+  Caption := ' ';
 end;
 
   SetToolPanelMaxWidth();
