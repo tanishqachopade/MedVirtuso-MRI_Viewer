@@ -982,7 +982,7 @@ object GLForm1: TGLForm1
         Width = 314
         Align = alTop
         AutoSize = True
-        Caption = '2D Slice Selection'
+        Caption = 'Navigation'
         ClientHeight = 220
         ClientWidth = 310
         Constraints.MinWidth = 12
@@ -2626,7 +2626,7 @@ object GLForm1: TGLForm1
       end
     end
     object MenuItem2: TMenuItem
-      Caption = 'AboutUs'
+      Caption = 'About Us'
       OnClick = MenuItem2Click
     end
   end
