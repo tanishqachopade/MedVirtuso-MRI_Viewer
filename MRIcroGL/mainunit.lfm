@@ -144,7 +144,7 @@ object GLForm1: TGLForm1
           AnchorSideTop.Side = asrBottom
           Left = 0
           Height = 28
-          Top = 95
+          Top =  95
           Width = 171
           BorderSpacing.Top = 5
           ItemHeight = 20
@@ -176,7 +176,7 @@ object GLForm1: TGLForm1
           AnchorSideRight.Side = asrBottom
           Left = 152
           Height = 38
-          Top = 188
+          Top = 150
           Width = 145
           Max = 100
           Position = 100
@@ -198,6 +198,7 @@ object GLForm1: TGLForm1
           Height = 31
           Top = 94
           Width = 110
+          
           BorderSpacing.Left = 8
           Caption = 'Options'
           ParentFont = False
@@ -925,7 +926,7 @@ object GLForm1: TGLForm1
         Width = 314
         Align = alTop
         AutoSize = True
-        Caption = 'Lines'
+        Caption = 'Crosshair'
         ClientHeight = 34
         ClientWidth = 310
         Constraints.MinWidth = 12
@@ -982,7 +983,7 @@ object GLForm1: TGLForm1
         Width = 314
         Align = alTop
         AutoSize = True
-        Caption = '2D Slice Selection'
+        Caption = 'Navigation'
         ClientHeight = 220
         ClientWidth = 310
         Constraints.MinWidth = 12
@@ -2626,9 +2627,12 @@ object GLForm1: TGLForm1
       end
     end
     object MenuItem2: TMenuItem
-      Caption = 'AboutUs'
+      Caption = 'About Us'
       OnClick = MenuItem2Click
     end
+
+  
+
   end
   object OpenDialog1: TOpenDialog
     Left = 380
