@@ -7,8 +7,9 @@
       <Unit0>
         <Filename Value="MRIcroGL.lpr"/>
         <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="28"/>
+        <TopLine Value="2"/>
         <CursorPos Y="41"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
@@ -19,7 +20,6 @@
         <ComponentName Value="GLForm1"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
         <TopLine Value="4741"/>
         <CursorPos X="3" Y="4743"/>
         <UsageCount Value="204"/>
@@ -415,123 +415,123 @@
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
         <Filename Value="nifti_foreign.pas"/>
-        <Caret Line="190" Column="40" TopLine="167"/>
+        <Caret Line="6161" Column="20" TopLine="6138"/>
       </Position1>
       <Position2>
         <Filename Value="nifti_foreign.pas"/>
-        <Caret Line="6161" Column="20" TopLine="6138"/>
+        <Caret Line="85" Column="44" TopLine="71"/>
       </Position2>
       <Position3>
         <Filename Value="nifti_foreign.pas"/>
-        <Caret Line="85" Column="44" TopLine="71"/>
+        <Caret Line="113" Column="20" TopLine="90"/>
       </Position3>
       <Position4>
         <Filename Value="nifti_foreign.pas"/>
-        <Caret Line="113" Column="20" TopLine="90"/>
+        <Caret Line="144" Column="22" TopLine="121"/>
       </Position4>
       <Position5>
         <Filename Value="nifti_foreign.pas"/>
-        <Caret Line="144" Column="22" TopLine="121"/>
+        <Caret Line="8" Column="61"/>
       </Position5>
       <Position6>
         <Filename Value="nifti_foreign.pas"/>
-        <Caret Line="8" Column="61"/>
+        <Caret Line="19" Column="17"/>
       </Position6>
       <Position7>
         <Filename Value="nifti_foreign.pas"/>
-        <Caret Line="19" Column="17"/>
+        <Caret Line="205" Column="10" TopLine="184"/>
       </Position7>
       <Position8>
-        <Filename Value="nifti_foreign.pas"/>
-        <Caret Line="205" Column="10" TopLine="184"/>
+        <Filename Value="mainunit.pas"/>
+        <Caret Line="10195" Column="7" TopLine="10191"/>
       </Position8>
       <Position9>
         <Filename Value="mainunit.pas"/>
-        <Caret Line="10195" Column="7" TopLine="10191"/>
+        <Caret Line="10196" Column="7" TopLine="10192"/>
       </Position9>
       <Position10>
         <Filename Value="mainunit.pas"/>
-        <Caret Line="10196" Column="7" TopLine="10192"/>
+        <Caret Line="1057" Column="3" TopLine="1054"/>
       </Position10>
       <Position11>
         <Filename Value="mainunit.pas"/>
-        <Caret Line="1057" Column="3" TopLine="1054"/>
+        <Caret Line="6972" Column="3" TopLine="6957"/>
       </Position11>
       <Position12>
         <Filename Value="mainunit.pas"/>
-        <Caret Line="6972" Column="3" TopLine="6957"/>
+        <Caret Line="7919" Column="6" TopLine="7916"/>
       </Position12>
       <Position13>
         <Filename Value="mainunit.pas"/>
-        <Caret Line="7919" Column="6" TopLine="7916"/>
+        <Caret Line="3515" Column="3" TopLine="3513"/>
       </Position13>
       <Position14>
         <Filename Value="mainunit.pas"/>
-        <Caret Line="3515" Column="3" TopLine="3513"/>
+        <Caret Line="6978" Column="55" TopLine="6968"/>
       </Position14>
       <Position15>
         <Filename Value="mainunit.pas"/>
-        <Caret Line="6978" Column="55" TopLine="6968"/>
+        <Caret Line="6968" TopLine="6968"/>
       </Position15>
       <Position16>
-        <Filename Value="mainunit.pas"/>
-        <Caret Line="6968" TopLine="6968"/>
-      </Position16>
-      <Position17>
         <Filename Value="MRIcroGL.lpr"/>
         <Caret Line="41" TopLine="28"/>
+      </Position16>
+      <Position17>
+        <Filename Value="mainunit.pas"/>
+        <Caret Line="631" Column="69" TopLine="625"/>
       </Position17>
       <Position18>
         <Filename Value="mainunit.pas"/>
-        <Caret Line="631" Column="69" TopLine="625"/>
+        <Caret Line="630" Column="69" TopLine="624"/>
       </Position18>
       <Position19>
         <Filename Value="mainunit.pas"/>
-        <Caret Line="630" Column="69" TopLine="624"/>
+        <Caret Line="632" Column="69" TopLine="626"/>
       </Position19>
       <Position20>
         <Filename Value="mainunit.pas"/>
-        <Caret Line="632" Column="69" TopLine="626"/>
+        <Caret Line="631" Column="69" TopLine="625"/>
       </Position20>
       <Position21>
         <Filename Value="mainunit.pas"/>
-        <Caret Line="631" Column="69" TopLine="625"/>
+        <Caret Line="407" Column="15" TopLine="400"/>
       </Position21>
       <Position22>
         <Filename Value="mainunit.pas"/>
-        <Caret Line="407" Column="15" TopLine="400"/>
+        <Caret Line="405" Column="26" TopLine="400"/>
       </Position22>
       <Position23>
         <Filename Value="mainunit.pas"/>
-        <Caret Line="405" Column="26" TopLine="400"/>
+        <Caret Line="4777" TopLine="4773"/>
       </Position23>
       <Position24>
         <Filename Value="mainunit.pas"/>
-        <Caret Line="4777" TopLine="4773"/>
+        <Caret Line="4874" Column="19" TopLine="4868"/>
       </Position24>
       <Position25>
         <Filename Value="mainunit.pas"/>
-        <Caret Line="4874" Column="19" TopLine="4868"/>
+        <Caret Line="6983" TopLine="6976"/>
       </Position25>
       <Position26>
         <Filename Value="mainunit.pas"/>
-        <Caret Line="6983" TopLine="6976"/>
+        <Caret Line="584" Column="52" TopLine="581"/>
       </Position26>
       <Position27>
         <Filename Value="mainunit.pas"/>
-        <Caret Line="584" Column="52" TopLine="581"/>
+        <Caret Line="1059" Column="3" TopLine="1056"/>
       </Position27>
       <Position28>
         <Filename Value="mainunit.pas"/>
-        <Caret Line="1059" Column="3" TopLine="1056"/>
+        <Caret Line="1058" Column="3" TopLine="1055"/>
       </Position28>
       <Position29>
         <Filename Value="mainunit.pas"/>
-        <Caret Line="1058" Column="3" TopLine="1055"/>
+        <Caret Line="1059" Column="3" TopLine="1056"/>
       </Position29>
       <Position30>
         <Filename Value="mainunit.pas"/>
-        <Caret Line="1059" Column="3" TopLine="1056"/>
+        <Caret Line="4743" Column="3" TopLine="4741"/>
       </Position30>
     </JumpHistory>
     <RunParams>

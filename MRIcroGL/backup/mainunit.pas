@@ -456,6 +456,7 @@ type
     procedure ScriptHaltMenuClick(Sender: TObject);
     procedure ScriptingPyVersionClick(Sender: TObject);
     procedure ScriptingSepMenuClick(Sender: TObject);
+    procedure ToolPanelClick(Sender: TObject);
     procedure UpdateCropMask(msk: TVec6);
     procedure CreateOverlapImageMenuClick(Sender: TObject);
     procedure CreateSubtractionPlotMenuClick(Sender: TObject);
@@ -4733,6 +4734,11 @@ begin
 end;
 
 procedure TGLForm1.ScriptingSepMenuClick(Sender: TObject);
+begin
+
+end;
+
+procedure TGLForm1.ToolPanelClick(Sender: TObject);
 begin
 
 end;
@@ -10339,7 +10345,7 @@ begin
   Parent := RulerCheck.Parent;
   Left := 30;
   Top := RulerCheck.Top + 500;
-  Caption := 'NOT FOR CLINICAL USE';
+  Caption := ' ';
 end;
 
   SetToolPanelMaxWidth();

@@ -2615,10 +2615,6 @@ object GLForm1: TGLForm1
       Caption = 'About Us'
       OnClick = MenuItem2Click
     end
-    object LicenseMenuClick: TMenuItem
-      Caption = 'License'
-      OnClick = LicenseMenuClick
-    end
   end
   object OpenDialog1: TOpenDialog
     Left = 380
