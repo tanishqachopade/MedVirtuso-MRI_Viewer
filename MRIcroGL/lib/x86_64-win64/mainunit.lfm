@@ -1,15 +1,15 @@
 object GLForm1: TGLForm1
-  Left = 396
-  Height = 834
-  Top = 119
-  Width = 1145
+  Left = 357
+  Height = 1001
+  Top = 322
+  Width = 1374
   AllowDropFiles = True
   Caption = 'MRIcroGL'
-  ClientHeight = 834
-  ClientWidth = 1145
-  Constraints.MinHeight = 25
-  Constraints.MinWidth = 25
-  DesignTimePPI = 120
+  ClientHeight = 1001
+  ClientWidth = 1374
+  Constraints.MinHeight = 30
+  Constraints.MinWidth = 30
+  DesignTimePPI = 144
   Menu = MainMenu
   Position = poScreenCenter
   LCLVersion = '4.6.0.0'
@@ -24,52 +24,52 @@ object GLForm1: TGLForm1
   OnShow = FormShow
   object TopPanel: TPanel
     Left = 0
-    Height = 726
+    Height = 871
     Top = 0
-    Width = 1145
+    Width = 1374
     Align = alClient
-    ClientHeight = 726
-    ClientWidth = 1145
+    ClientHeight = 871
+    ClientWidth = 1374
     ParentFont = False
     TabOrder = 0
     object ToolPanel: TScrollBox
       Left = 1
-      Height = 724
+      Height = 869
       Top = 1
-      Width = 335
+      Width = 402
       HorzScrollBar.Page = 1
       HorzScrollBar.Visible = False
-      VertScrollBar.Page = 724
+      VertScrollBar.Page = 869
       Align = alLeft
       BorderStyle = bsNone
-      ClientHeight = 724
-      ClientWidth = 314
+      ClientHeight = 869
+      ClientWidth = 376
       ParentFont = False
       TabOrder = 0
       OnDblClick = ToolPanelDblClick
       object LayerBox: TGroupBox
         Left = 0
-        Height = 289
+        Height = 344
         Top = 0
-        Width = 314
+        Width = 376
         Align = alTop
         AutoSize = True
         Caption = 'Layers'
-        ClientHeight = 264
-        ClientWidth = 310
-        Constraints.MinWidth = 12
+        ClientHeight = 314
+        ClientWidth = 372
+        Constraints.MinWidth = 14
         ParentFont = False
         ParentShowHint = False
         ShowHint = True
         TabOrder = 0
         object LayerList: TCheckListBox
           Left = 0
-          Height = 90
+          Height = 108
           Hint = 'Right-click for options'
           Top = 0
-          Width = 310
+          Width = 372
           Align = alTop
-          Constraints.MaxHeight = 90
+          Constraints.MaxHeight = 108
           ItemHeight = 0
           ParentFont = False
           ParentShowHint = False
@@ -85,9 +85,9 @@ object GLForm1: TGLForm1
           AnchorSideTop.Control = LayerDarkEdit
           AnchorSideTop.Side = asrCenter
           Left = 0
-          Height = 20
-          Top = 132
-          Width = 50
+          Height = 25
+          Top = 157
+          Width = 60
           Caption = 'Darkest'
           ParentFont = False
           OnClick = LayerResetBrightnessMenuClick
@@ -97,12 +97,12 @@ object GLForm1: TGLForm1
           AnchorSideTop.Control = LayerColorDrop
           AnchorSideTop.Side = asrBottom
           AnchorSideRight.Side = asrBottom
-          Left = 152
-          Height = 28
-          Top = 128
-          Width = 145
-          BorderSpacing.Left = 152
-          BorderSpacing.Top = 5
+          Left = 182
+          Height = 33
+          Top = 153
+          Width = 174
+          BorderSpacing.Left = 182
+          BorderSpacing.Top = 6
           ParentFont = False
           TabOrder = 3
           Text = '20'
@@ -114,11 +114,11 @@ object GLForm1: TGLForm1
           AnchorSideTop.Control = LayerDarkEdit
           AnchorSideTop.Side = asrBottom
           AnchorSideRight.Side = asrBottom
-          Left = 152
-          Height = 28
-          Top = 158
-          Width = 145
-          BorderSpacing.Left = 152
+          Left = 182
+          Height = 33
+          Top = 188
+          Width = 174
+          BorderSpacing.Left = 182
           BorderSpacing.Top = 2
           ParentFont = False
           TabOrder = 4
@@ -131,9 +131,9 @@ object GLForm1: TGLForm1
           AnchorSideTop.Control = LayerBrightEdit
           AnchorSideTop.Side = asrCenter
           Left = 0
-          Height = 20
-          Top = 162
-          Width = 59
+          Height = 25
+          Top = 192
+          Width = 70
           Caption = 'Brightest'
           ParentFont = False
           OnClick = LayerResetBrightnessMenuClick
@@ -143,11 +143,11 @@ object GLForm1: TGLForm1
           AnchorSideTop.Control = LayerList
           AnchorSideTop.Side = asrBottom
           Left = 0
-          Height = 28
-          Top = 95
-          Width = 171
-          BorderSpacing.Top = 5
-          ItemHeight = 20
+          Height = 33
+          Top = 114
+          Width = 205
+          BorderSpacing.Top = 6
+          ItemHeight = 25
           ItemIndex = 0
           Items.Strings = (
             'Grayscale'
@@ -163,9 +163,9 @@ object GLForm1: TGLForm1
           AnchorSideTop.Control = LayerAlphaTrack
           AnchorSideTop.Side = asrCenter
           Left = 0
-          Height = 20
-          Top = 197
-          Width = 51
+          Height = 25
+          Top = 234
+          Width = 61
           Caption = 'Opacity'
           ParentFont = False
         end
@@ -174,14 +174,14 @@ object GLForm1: TGLForm1
           AnchorSideTop.Control = LayerBrightEdit
           AnchorSideTop.Side = asrBottom
           AnchorSideRight.Side = asrBottom
-          Left = 152
-          Height = 38
-          Top = 188
-          Width = 145
+          Left = 182
+          Height = 46
+          Top = 223
+          Width = 174
           Max = 100
           Position = 100
           TickStyle = tsNone
-          BorderSpacing.Left = 152
+          BorderSpacing.Left = 182
           BorderSpacing.Top = 2
           ParentFont = False
           TabOrder = 5
@@ -194,11 +194,11 @@ object GLForm1: TGLForm1
           AnchorSideTop.Side = asrCenter
           AnchorSideRight.Control = LayerList
           AnchorSideRight.Side = asrBottom
-          Left = 179
-          Height = 31
-          Top = 94
-          Width = 110
-          BorderSpacing.Left = 8
+          Left = 215
+          Height = 37
+          Top = 112
+          Width = 132
+          BorderSpacing.Left = 10
           Caption = 'Options'
           ParentFont = False
           TabOrder = 2
@@ -211,12 +211,12 @@ object GLForm1: TGLForm1
           AnchorSideTop.Side = asrCenter
           AnchorSideRight.Control = LayerList
           AnchorSideRight.Side = asrBottom
-          Left = 179
-          Height = 31
-          Top = 233
-          Width = 110
-          BorderSpacing.Left = 8
-          BorderSpacing.Top = 5
+          Left = 215
+          Height = 37
+          Top = 277
+          Width = 132
+          BorderSpacing.Left = 10
+          BorderSpacing.Top = 6
           Caption = '...'
           ParentFont = False
           TabOrder = 6
@@ -228,11 +228,11 @@ object GLForm1: TGLForm1
           AnchorSideTop.Control = LayerAlphaTrack
           AnchorSideTop.Side = asrBottom
           Left = 0
-          Height = 28
-          Top = 234
-          Width = 171
-          BorderSpacing.Top = 8
-          ItemHeight = 20
+          Height = 33
+          Top = 279
+          Width = 205
+          BorderSpacing.Top = 10
+          ItemHeight = 25
           ItemIndex = 0
           Items.Strings = (
             'AFNI'
@@ -250,16 +250,16 @@ object GLForm1: TGLForm1
       end
       object ClipBox: TGroupBox
         Left = 0
-        Height = 183
+        Height = 220
         Hint = 'Set clip plane'
-        Top = 289
-        Width = 314
+        Top = 344
+        Width = 376
         Align = alTop
         AutoSize = True
         Caption = 'Clipping'
-        ClientHeight = 158
-        ClientWidth = 310
-        Constraints.MinWidth = 12
+        ClientHeight = 190
+        ClientWidth = 372
+        Constraints.MinWidth = 14
         ParentFont = False
         ParentShowHint = False
         ShowHint = True
@@ -269,9 +269,9 @@ object GLForm1: TGLForm1
           AnchorSideTop.Control = ClipDepthTrack
           AnchorSideTop.Side = asrCenter
           Left = 2
-          Height = 20
-          Top = 9
-          Width = 41
+          Height = 25
+          Top = 11
+          Width = 49
           BorderSpacing.Left = 2
           Caption = 'Depth'
           ParentFont = False
@@ -281,15 +281,15 @@ object GLForm1: TGLForm1
           AnchorSideLeft.Control = ClipBox
           AnchorSideRight.Control = ClipBox
           AnchorSideRight.Side = asrBottom
-          Left = 152
-          Height = 38
+          Left = 182
+          Height = 46
           Top = 0
-          Width = 145
+          Width = 174
           Max = 999
           Position = 0
           TickStyle = tsNone
           OnChange = UpdateShaderSettings
-          BorderSpacing.Left = 152
+          BorderSpacing.Left = 182
           BorderSpacing.Right = 2
           ParentFont = False
           TabOrder = 0
@@ -300,10 +300,10 @@ object GLForm1: TGLForm1
           AnchorSideTop.Side = asrBottom
           AnchorSideRight.Control = ClipDepthTrack
           AnchorSideRight.Side = asrBottom
-          Left = 152
-          Height = 38
-          Top = 40
-          Width = 143
+          Left = 182
+          Height = 46
+          Top = 48
+          Width = 172
           Max = 360
           Position = 180
           TickStyle = tsNone
@@ -320,9 +320,9 @@ object GLForm1: TGLForm1
           AnchorSideTop.Control = ClipAziTrack
           AnchorSideTop.Side = asrCenter
           Left = 2
-          Height = 20
-          Top = 49
-          Width = 55
+          Height = 25
+          Top = 59
+          Width = 66
           BorderSpacing.Left = 2
           Caption = 'Azimuth'
           ParentFont = False
@@ -334,10 +334,10 @@ object GLForm1: TGLForm1
           AnchorSideTop.Side = asrBottom
           AnchorSideRight.Control = ClipDepthTrack
           AnchorSideRight.Side = asrBottom
-          Left = 152
-          Height = 38
-          Top = 80
-          Width = 143
+          Left = 182
+          Height = 46
+          Top = 96
+          Width = 172
           Max = 180
           Min = -180
           Position = 0
@@ -355,9 +355,9 @@ object GLForm1: TGLForm1
           AnchorSideTop.Control = ClipElevTrack
           AnchorSideTop.Side = asrCenter
           Left = 2
-          Height = 20
-          Top = 89
-          Width = 61
+          Height = 25
+          Top = 107
+          Width = 71
           BorderSpacing.Left = 2
           Caption = 'Elevation'
           ParentFont = False
@@ -369,10 +369,10 @@ object GLForm1: TGLForm1
           AnchorSideTop.Side = asrBottom
           AnchorSideRight.Control = ClipDepthTrack
           AnchorSideRight.Side = asrBottom
-          Left = 152
-          Height = 38
-          Top = 120
-          Width = 143
+          Left = 182
+          Height = 46
+          Top = 144
+          Width = 172
           Max = 1000
           Position = 1000
           TickStyle = tsNone
@@ -389,9 +389,9 @@ object GLForm1: TGLForm1
           AnchorSideTop.Control = ClipThickTrack
           AnchorSideTop.Side = asrCenter
           Left = 2
-          Height = 20
-          Top = 129
-          Width = 62
+          Height = 25
+          Top = 155
+          Width = 75
           BorderSpacing.Left = 2
           Caption = 'Thickness'
           ParentFont = False
@@ -400,15 +400,15 @@ object GLForm1: TGLForm1
       end
       object ShaderBox: TGroupBox
         Left = 0
-        Height = 489
-        Top = 1151
-        Width = 314
+        Height = 588
+        Top = 1371
+        Width = 376
         Align = alClient
         AutoSize = True
         Caption = 'Render'
-        ClientHeight = 464
-        ClientWidth = 310
-        Constraints.MinWidth = 12
+        ClientHeight = 558
+        ClientWidth = 372
+        Constraints.MinWidth = 14
         ParentFont = False
         TabOrder = 2
         object LightLabel: TLabel
@@ -417,12 +417,12 @@ object GLForm1: TGLForm1
           AnchorSideTop.Side = asrBottom
           AnchorSideRight.Control = LightElevTrack
           Left = 2
-          Height = 20
+          Height = 25
           Hint = 'Set location of light source (e.g. above, below, left, right)'
-          Top = 38
-          Width = 33
+          Top = 45
+          Width = 39
           BorderSpacing.Left = 2
-          BorderSpacing.Top = 8
+          BorderSpacing.Top = 10
           Caption = 'Light'
           ParentFont = False
           ParentShowHint = False
@@ -432,12 +432,12 @@ object GLForm1: TGLForm1
           AnchorSideLeft.Control = ShaderBox
           AnchorSideTop.Control = ShaderBox
           Left = 2
-          Height = 28
+          Height = 33
           Top = 2
-          Width = 165
+          Width = 198
           BorderSpacing.Left = 2
           BorderSpacing.Top = 2
-          ItemHeight = 20
+          ItemHeight = 25
           ParentFont = False
           Style = csDropDownList
           TabOrder = 0
@@ -448,13 +448,13 @@ object GLForm1: TGLForm1
           AnchorSideLeft.Side = asrBottom
           AnchorSideTop.Control = QualityTrack
           AnchorSideTop.Side = asrCenter
-          Left = 177
-          Height = 20
+          Left = 212
+          Height = 25
           Hint = 'Render quality: higher values are slower but look better'
-          Top = 11
-          Width = 11
-          BorderSpacing.Left = 10
-          BorderSpacing.Right = 5
+          Top = 13
+          Width = 14
+          BorderSpacing.Left = 12
+          BorderSpacing.Right = 6
           Caption = 'Q'
           ParentFont = False
           ParentShowHint = False
@@ -465,16 +465,16 @@ object GLForm1: TGLForm1
           AnchorSideLeft.Side = asrBottom
           AnchorSideTop.Control = ShaderBox
           AnchorSideRight.Side = asrBottom
-          Left = 193
-          Height = 38
+          Left = 232
+          Height = 46
           Hint = 'Render quality: higher values are slower but look better. Smallest value is dynamic: initially poor quality with high quality after pause.'
           Top = 2
-          Width = 100
+          Width = 120
           Max = 5
           Position = 0
           TickStyle = tsNone
           OnChange = UpdateShaderSettings
-          BorderSpacing.Left = 5
+          BorderSpacing.Left = 6
           BorderSpacing.Top = 2
           ParentFont = False
           ParentShowHint = False
@@ -487,17 +487,17 @@ object GLForm1: TGLForm1
           AnchorSideTop.Control = LightLabel
           AnchorSideTop.Side = asrCenter
           AnchorSideRight.Control = LightAziTrack
-          Left = 40
-          Height = 38
-          Top = 29
-          Width = 100
+          Left = 47
+          Height = 46
+          Top = 34
+          Width = 120
           Max = 90
           Min = -90
           Position = 45
           TickStyle = tsNone
           OnChange = UpdateShaderSettings
-          BorderSpacing.Left = 5
-          BorderSpacing.Right = 5
+          BorderSpacing.Left = 6
+          BorderSpacing.Right = 6
           ParentFont = False
           TabOrder = 2
         end
@@ -508,16 +508,16 @@ object GLForm1: TGLForm1
           AnchorSideTop.Side = asrCenter
           AnchorSideRight.Control = ShaderBox
           AnchorSideRight.Side = asrBottom
-          Left = 148
-          Height = 38
-          Top = 29
-          Width = 100
+          Left = 177
+          Height = 46
+          Top = 34
+          Width = 120
           Max = 180
           Min = -180
           Position = 0
           TickStyle = tsNone
           OnChange = UpdateShaderSettings
-          BorderSpacing.Left = 8
+          BorderSpacing.Left = 10
           BorderSpacing.Right = 2
           ParentFont = False
           TabOrder = 3
@@ -528,9 +528,9 @@ object GLForm1: TGLForm1
           AnchorSideTop.Control = S1Track
           AnchorSideTop.Side = asrCenter
           Left = 2
-          Height = 20
-          Top = 75
-          Width = 17
+          Height = 25
+          Top = 91
+          Width = 21
           BorderSpacing.Left = 2
           Caption = 'o1'
           ParentFont = False
@@ -544,16 +544,16 @@ object GLForm1: TGLForm1
           AnchorSideTop.Side = asrBottom
           AnchorSideRight.Control = ShaderBox
           AnchorSideRight.Side = asrBottom
-          Left = 152
-          Height = 38
-          Top = 66
-          Width = 145
+          Left = 182
+          Height = 46
+          Top = 80
+          Width = 174
           Max = 100
           Position = 0
           TickStyle = tsNone
           OnChange = PrefTrackChange
-          BorderSpacing.Left = 152
-          BorderSpacing.Top = 8
+          BorderSpacing.Left = 182
+          BorderSpacing.Top = 10
           BorderSpacing.Right = 2
           ParentFont = False
           TabOrder = 4
@@ -565,9 +565,9 @@ object GLForm1: TGLForm1
           AnchorSideTop.Control = S2Track
           AnchorSideTop.Side = asrCenter
           Left = 2
-          Height = 20
-          Top = 115
-          Width = 17
+          Height = 25
+          Top = 139
+          Width = 21
           BorderSpacing.Left = 2
           Caption = 'o2'
           ParentFont = False
@@ -581,10 +581,10 @@ object GLForm1: TGLForm1
           AnchorSideTop.Side = asrBottom
           AnchorSideRight.Control = ShaderBox
           AnchorSideRight.Side = asrBottom
-          Left = 152
-          Height = 38
-          Top = 106
-          Width = 145
+          Left = 182
+          Height = 46
+          Top = 128
+          Width = 174
           Max = 100
           Position = 0
           TickStyle = tsNone
@@ -601,9 +601,9 @@ object GLForm1: TGLForm1
           AnchorSideTop.Control = S3Track
           AnchorSideTop.Side = asrCenter
           Left = 2
-          Height = 20
-          Top = 155
-          Width = 17
+          Height = 25
+          Top = 187
+          Width = 21
           BorderSpacing.Left = 2
           Caption = 'o3'
           ParentFont = False
@@ -617,10 +617,10 @@ object GLForm1: TGLForm1
           AnchorSideTop.Side = asrBottom
           AnchorSideRight.Control = ShaderBox
           AnchorSideRight.Side = asrBottom
-          Left = 152
-          Height = 38
-          Top = 146
-          Width = 148
+          Left = 182
+          Height = 46
+          Top = 176
+          Width = 178
           Max = 100
           Position = 0
           TickStyle = tsNone
@@ -637,9 +637,9 @@ object GLForm1: TGLForm1
           AnchorSideTop.Control = S4Track
           AnchorSideTop.Side = asrCenter
           Left = 2
-          Height = 20
-          Top = 195
-          Width = 17
+          Height = 25
+          Top = 235
+          Width = 21
           BorderSpacing.Left = 2
           Caption = 'o4'
           ParentFont = False
@@ -653,10 +653,10 @@ object GLForm1: TGLForm1
           AnchorSideTop.Side = asrBottom
           AnchorSideRight.Control = ShaderBox
           AnchorSideRight.Side = asrBottom
-          Left = 152
-          Height = 38
-          Top = 186
-          Width = 148
+          Left = 182
+          Height = 46
+          Top = 224
+          Width = 178
           Max = 100
           Position = 0
           TickStyle = tsNone
@@ -673,9 +673,9 @@ object GLForm1: TGLForm1
           AnchorSideTop.Control = S5Track
           AnchorSideTop.Side = asrCenter
           Left = 2
-          Height = 20
-          Top = 235
-          Width = 17
+          Height = 25
+          Top = 283
+          Width = 21
           BorderSpacing.Left = 2
           Caption = 'o5'
           ParentFont = False
@@ -689,10 +689,10 @@ object GLForm1: TGLForm1
           AnchorSideTop.Side = asrBottom
           AnchorSideRight.Control = ShaderBox
           AnchorSideRight.Side = asrBottom
-          Left = 152
-          Height = 38
-          Top = 226
-          Width = 148
+          Left = 182
+          Height = 46
+          Top = 272
+          Width = 178
           Max = 100
           Position = 0
           TickStyle = tsNone
@@ -709,9 +709,9 @@ object GLForm1: TGLForm1
           AnchorSideTop.Control = S6Track
           AnchorSideTop.Side = asrCenter
           Left = 2
-          Height = 20
-          Top = 275
-          Width = 17
+          Height = 25
+          Top = 331
+          Width = 21
           BorderSpacing.Left = 2
           Caption = 'o6'
           ParentFont = False
@@ -725,10 +725,10 @@ object GLForm1: TGLForm1
           AnchorSideTop.Side = asrBottom
           AnchorSideRight.Control = ShaderBox
           AnchorSideRight.Side = asrBottom
-          Left = 152
-          Height = 38
-          Top = 266
-          Width = 148
+          Left = 182
+          Height = 46
+          Top = 320
+          Width = 178
           Max = 100
           Position = 0
           TickStyle = tsNone
@@ -745,9 +745,9 @@ object GLForm1: TGLForm1
           AnchorSideTop.Control = S7Track
           AnchorSideTop.Side = asrCenter
           Left = 2
-          Height = 20
-          Top = 315
-          Width = 17
+          Height = 25
+          Top = 379
+          Width = 21
           BorderSpacing.Left = 2
           Caption = 'o7'
           ParentFont = False
@@ -761,10 +761,10 @@ object GLForm1: TGLForm1
           AnchorSideTop.Side = asrBottom
           AnchorSideRight.Control = ShaderBox
           AnchorSideRight.Side = asrBottom
-          Left = 152
-          Height = 38
-          Top = 306
-          Width = 148
+          Left = 182
+          Height = 46
+          Top = 368
+          Width = 178
           Max = 100
           Position = 0
           TickStyle = tsNone
@@ -781,9 +781,9 @@ object GLForm1: TGLForm1
           AnchorSideTop.Control = S8Track
           AnchorSideTop.Side = asrCenter
           Left = 2
-          Height = 20
-          Top = 355
-          Width = 17
+          Height = 25
+          Top = 427
+          Width = 21
           BorderSpacing.Left = 2
           Caption = 'o8'
           ParentFont = False
@@ -797,10 +797,10 @@ object GLForm1: TGLForm1
           AnchorSideTop.Side = asrBottom
           AnchorSideRight.Control = ShaderBox
           AnchorSideRight.Side = asrBottom
-          Left = 152
-          Height = 38
-          Top = 346
-          Width = 148
+          Left = 182
+          Height = 46
+          Top = 416
+          Width = 178
           Max = 100
           Position = 0
           TickStyle = tsNone
@@ -817,9 +817,9 @@ object GLForm1: TGLForm1
           AnchorSideTop.Control = S9Track
           AnchorSideTop.Side = asrCenter
           Left = 2
-          Height = 20
-          Top = 395
-          Width = 17
+          Height = 25
+          Top = 475
+          Width = 21
           BorderSpacing.Left = 2
           Caption = 'o9'
           ParentFont = False
@@ -833,10 +833,10 @@ object GLForm1: TGLForm1
           AnchorSideTop.Side = asrBottom
           AnchorSideRight.Control = ShaderBox
           AnchorSideRight.Side = asrBottom
-          Left = 152
-          Height = 38
-          Top = 386
-          Width = 148
+          Left = 182
+          Height = 46
+          Top = 464
+          Width = 178
           Max = 100
           Position = 0
           TickStyle = tsNone
@@ -853,9 +853,9 @@ object GLForm1: TGLForm1
           AnchorSideTop.Control = S10Track
           AnchorSideTop.Side = asrCenter
           Left = 2
-          Height = 20
-          Top = 435
-          Width = 25
+          Height = 25
+          Top = 523
+          Width = 31
           BorderSpacing.Left = 2
           Caption = 'o10'
           ParentFont = False
@@ -869,10 +869,10 @@ object GLForm1: TGLForm1
           AnchorSideTop.Side = asrBottom
           AnchorSideRight.Control = ShaderBox
           AnchorSideRight.Side = asrBottom
-          Left = 152
-          Height = 38
-          Top = 426
-          Width = 148
+          Left = 182
+          Height = 46
+          Top = 512
+          Width = 178
           Max = 100
           Position = 0
           TickStyle = tsNone
@@ -888,12 +888,12 @@ object GLForm1: TGLForm1
           AnchorSideLeft.Side = asrBottom
           AnchorSideTop.Control = LightLabel
           AnchorSideTop.Side = asrCenter
-          Left = 37
-          Height = 28
-          Top = 34
-          Width = 125
+          Left = 43
+          Height = 33
+          Top = 41
+          Width = 150
           BorderSpacing.Left = 2
-          ItemHeight = 20
+          ItemHeight = 25
           ParentFont = False
           Style = csDropDownList
           TabOrder = 14
@@ -905,12 +905,12 @@ object GLForm1: TGLForm1
           AnchorSideLeft.Side = asrBottom
           AnchorSideTop.Control = LightLabel
           AnchorSideTop.Side = asrCenter
-          Left = 167
-          Height = 28
-          Top = 34
-          Width = 125
-          BorderSpacing.Left = 5
-          ItemHeight = 20
+          Left = 199
+          Height = 33
+          Top = 41
+          Width = 150
+          BorderSpacing.Left = 6
+          ItemHeight = 25
           ParentFont = False
           Style = csDropDownList
           TabOrder = 15
@@ -920,15 +920,15 @@ object GLForm1: TGLForm1
       end
       object LineBox: TGroupBox
         Left = 0
-        Height = 59
-        Top = 472
-        Width = 314
+        Height = 69
+        Top = 564
+        Width = 376
         Align = alTop
         AutoSize = True
         Caption = 'Lines'
-        ClientHeight = 34
-        ClientWidth = 310
-        Constraints.MinWidth = 12
+        ClientHeight = 39
+        ClientWidth = 372
+        Constraints.MinWidth = 14
         ParentFont = False
         TabOrder = 3
         object LineWidthLabel: TLabel
@@ -936,9 +936,9 @@ object GLForm1: TGLForm1
           AnchorSideTop.Control = LineWidthEdit
           AnchorSideTop.Side = asrCenter
           Left = 2
-          Height = 20
+          Height = 25
           Top = 6
-          Width = 40
+          Width = 48
           BorderSpacing.Left = 2
           Caption = 'Width'
           ParentFont = False
@@ -947,10 +947,10 @@ object GLForm1: TGLForm1
           AnchorSideLeft.Control = LineWidthLabel
           AnchorSideLeft.Side = asrBottom
           AnchorSideTop.Control = LineBox
-          Left = 44
-          Height = 28
+          Left = 52
+          Height = 33
           Top = 2
-          Width = 102
+          Width = 122
           BorderSpacing.Left = 2
           BorderSpacing.Top = 2
           MaxValue = 9
@@ -964,10 +964,10 @@ object GLForm1: TGLForm1
           AnchorSideLeft.Side = asrBottom
           AnchorSideTop.Control = LineWidthEdit
           AnchorSideTop.Side = asrCenter
-          Left = 148
-          Height = 35
-          Top = -1
-          Width = 102
+          Left = 176
+          Height = 42
+          Top = -3
+          Width = 122
           BorderSpacing.Left = 2
           Caption = 'Color'
           ParentFont = False
@@ -977,15 +977,15 @@ object GLForm1: TGLForm1
       end
       object SliceBox: TGroupBox
         Left = 0
-        Height = 245
-        Top = 906
-        Width = 314
+        Height = 292
+        Top = 1079
+        Width = 376
         Align = alTop
         AutoSize = True
         Caption = '2D Slice Selection'
-        ClientHeight = 220
-        ClientWidth = 310
-        Constraints.MinWidth = 12
+        ClientHeight = 262
+        ClientWidth = 372
+        Constraints.MinWidth = 14
         ParentFont = False
         TabOrder = 6
         object SliceABtn: TButton
@@ -993,10 +993,10 @@ object GLForm1: TGLForm1
           AnchorSideLeft.Control = SliceLBtn
           AnchorSideLeft.Side = asrBottom
           AnchorSideTop.Control = SliceBox
-          Left = 56
-          Height = 31
+          Left = 66
+          Height = 37
           Top = 2
-          Width = 52
+          Width = 62
           BorderSpacing.Left = 2
           BorderSpacing.Top = 2
           Caption = 'A'
@@ -1009,10 +1009,10 @@ object GLForm1: TGLForm1
           AnchorSideLeft.Control = SliceABtn
           AnchorSideTop.Control = SliceABtn
           AnchorSideTop.Side = asrBottom
-          Left = 56
-          Height = 31
-          Top = 35
-          Width = 52
+          Left = 66
+          Height = 37
+          Top = 41
+          Width = 62
           BorderSpacing.Top = 2
           Caption = 'P'
           ParentFont = False
@@ -1024,11 +1024,11 @@ object GLForm1: TGLForm1
           AnchorSideLeft.Control = SliceRBtn
           AnchorSideLeft.Side = asrBottom
           AnchorSideTop.Control = SliceBox
-          Left = 200
-          Height = 31
+          Left = 238
+          Height = 37
           Top = 2
-          Width = 52
-          BorderSpacing.Left = 38
+          Width = 62
+          BorderSpacing.Left = 46
           BorderSpacing.Top = 2
           Caption = 'S'
           ParentFont = False
@@ -1040,10 +1040,10 @@ object GLForm1: TGLForm1
           AnchorSideLeft.Control = SliceSBtn
           AnchorSideTop.Control = SliceSBtn
           AnchorSideTop.Side = asrBottom
-          Left = 200
-          Height = 31
-          Top = 35
-          Width = 52
+          Left = 238
+          Height = 37
+          Top = 41
+          Width = 62
           BorderSpacing.Top = 2
           Caption = 'I'
           ParentFont = False
@@ -1054,11 +1054,11 @@ object GLForm1: TGLForm1
           AnchorSideLeft.Control = SliceBox
           AnchorSideTop.Control = SliceABtn
           Left = 2
-          Height = 31
-          Top = 20
-          Width = 52
+          Height = 37
+          Top = 24
+          Width = 62
           BorderSpacing.Left = 2
-          BorderSpacing.Top = 18
+          BorderSpacing.Top = 22
           Caption = 'L'
           ParentFont = False
           TabOrder = 0
@@ -1070,10 +1070,10 @@ object GLForm1: TGLForm1
           AnchorSideLeft.Side = asrBottom
           AnchorSideTop.Control = SliceLBtn
           AnchorSideTop.Side = asrCenter
-          Left = 110
-          Height = 31
-          Top = 20
-          Width = 52
+          Left = 130
+          Height = 37
+          Top = 24
+          Width = 62
           BorderSpacing.Left = 2
           Caption = 'R'
           ParentFont = False
@@ -1085,9 +1085,9 @@ object GLForm1: TGLForm1
           AnchorSideTop.Control = CoordLabel
           AnchorSideTop.Side = asrBottom
           Left = 2
-          Height = 28
-          Top = 90
-          Width = 95
+          Height = 33
+          Top = 107
+          Width = 114
           BorderSpacing.Left = 2
           BorderSpacing.Top = 2
           ParentFont = False
@@ -1100,9 +1100,9 @@ object GLForm1: TGLForm1
           AnchorSideTop.Control = SlicePBtn
           AnchorSideTop.Side = asrBottom
           Left = 2
-          Height = 20
-          Top = 68
-          Width = 126
+          Height = 25
+          Top = 80
+          Width = 150
           BorderSpacing.Left = 2
           BorderSpacing.Top = 2
           Caption = 'Coordinates (X,Y,Z)'
@@ -1113,10 +1113,10 @@ object GLForm1: TGLForm1
           AnchorSideLeft.Side = asrBottom
           AnchorSideTop.Control = XCoordEdit
           AnchorSideTop.Side = asrCenter
-          Left = 99
-          Height = 28
-          Top = 90
-          Width = 95
+          Left = 118
+          Height = 33
+          Top = 107
+          Width = 114
           BorderSpacing.Left = 2
           ParentFont = False
           TabOrder = 7
@@ -1128,10 +1128,10 @@ object GLForm1: TGLForm1
           AnchorSideLeft.Side = asrBottom
           AnchorSideTop.Control = XCoordEdit
           AnchorSideTop.Side = asrCenter
-          Left = 196
-          Height = 28
-          Top = 90
-          Width = 95
+          Left = 234
+          Height = 33
+          Top = 107
+          Width = 114
           BorderSpacing.Left = 2
           ParentFont = False
           TabOrder = 8
@@ -1143,12 +1143,12 @@ object GLForm1: TGLForm1
           AnchorSideTop.Control = XCoordEdit
           AnchorSideTop.Side = asrBottom
           Left = 2
-          Height = 28
-          Top = 120
-          Width = 305
+          Height = 33
+          Top = 142
+          Width = 366
           BorderSpacing.Left = 2
           BorderSpacing.Top = 2
-          ItemHeight = 20
+          ItemHeight = 25
           ParentFont = False
           Style = csDropDownList
           TabOrder = 9
@@ -1158,17 +1158,17 @@ object GLForm1: TGLForm1
           AnchorSideLeft.Control = SliceBox
           AnchorSideTop.Control = AnatDrop
           AnchorSideTop.Side = asrBottom
-          Left = 152
-          Height = 38
-          Top = 153
-          Width = 145
+          Left = 182
+          Height = 46
+          Top = 181
+          Width = 174
           Max = 600
           Min = 100
           Position = 100
           TickStyle = tsNone
           OnChange = SliceZoomChange
-          BorderSpacing.Left = 152
-          BorderSpacing.Top = 5
+          BorderSpacing.Left = 182
+          BorderSpacing.Top = 6
           ParentFont = False
           TabOrder = 11
         end
@@ -1177,10 +1177,10 @@ object GLForm1: TGLForm1
           AnchorSideTop.Control = SliceZoom
           AnchorSideTop.Side = asrCenter
           Left = 2
-          Height = 31
+          Height = 37
           Hint = 'Slider adjusts scale factor. Control-drag to pan image. Click here to restore defaults.'
-          Top = 157
-          Width = 100
+          Top = 186
+          Width = 120
           BorderSpacing.Left = 2
           Caption = 'Zoom'
           ParentFont = False
@@ -1194,12 +1194,12 @@ object GLForm1: TGLForm1
           AnchorSideTop.Control = SliceZoom
           AnchorSideTop.Side = asrBottom
           Left = 2
-          Height = 24
+          Height = 29
           Hint = 'Do enlarged images appear blurry or jagged'
-          Top = 196
-          Width = 73
+          Top = 233
+          Width = 89
           BorderSpacing.Left = 2
-          BorderSpacing.Top = 5
+          BorderSpacing.Top = 6
           Caption = 'Smooth'
           Checked = True
           ParentFont = False
@@ -1214,13 +1214,13 @@ object GLForm1: TGLForm1
           AnchorSideLeft.Side = asrBottom
           AnchorSideTop.Control = Smooth2DCheck
           AnchorSideTop.Side = asrCenter
-          Left = 83
-          Height = 24
+          Left = 101
+          Height = 29
           Hint = 'Show Ruler (10 cm)'
-          Top = 196
-          Width = 55
-          BorderSpacing.Left = 8
-          BorderSpacing.Top = 5
+          Top = 233
+          Width = 65
+          BorderSpacing.Left = 10
+          BorderSpacing.Top = 6
           Caption = 'Ruler'
           Checked = True
           ParentFont = False
@@ -1233,15 +1233,15 @@ object GLForm1: TGLForm1
       end
       object CutoutBox: TGroupBox
         Left = 0
-        Height = 145
-        Top = 761
-        Width = 314
+        Height = 174
+        Top = 905
+        Width = 376
         Align = alTop
         AutoSize = True
         Caption = 'Cutout'
-        ClientHeight = 120
-        ClientWidth = 310
-        Constraints.MinWidth = 12
+        ClientHeight = 144
+        ClientWidth = 372
+        Constraints.MinWidth = 14
         ParentFont = False
         ParentShowHint = False
         ShowHint = True
@@ -1251,9 +1251,9 @@ object GLForm1: TGLForm1
           AnchorSideTop.Control = XTrackBar
           AnchorSideTop.Side = asrCenter
           Left = 2
-          Height = 20
-          Top = 11
-          Width = 9
+          Height = 25
+          Top = 13
+          Width = 11
           BorderSpacing.Left = 2
           Caption = 'X'
           ParentFont = False
@@ -1262,10 +1262,10 @@ object GLForm1: TGLForm1
           AnchorSideLeft.Control = XLabel
           AnchorSideLeft.Side = asrBottom
           AnchorSideTop.Control = CutoutBox
-          Left = 13
-          Height = 38
+          Left = 15
+          Height = 46
           Top = 2
-          Width = 95
+          Width = 114
           Max = 1000
           Position = 1000
           TickStyle = tsNone
@@ -1280,10 +1280,10 @@ object GLForm1: TGLForm1
           AnchorSideLeft.Side = asrBottom
           AnchorSideTop.Control = XTrackBar
           AnchorSideTop.Side = asrCenter
-          Left = 110
-          Height = 38
+          Left = 131
+          Height = 46
           Top = 2
-          Width = 95
+          Width = 114
           Max = 1000
           Position = 1000
           TickStyle = tsNone
@@ -1297,9 +1297,9 @@ object GLForm1: TGLForm1
           AnchorSideTop.Control = YTrackBar
           AnchorSideTop.Side = asrCenter
           Left = 2
-          Height = 20
-          Top = 51
-          Width = 8
+          Height = 25
+          Top = 61
+          Width = 10
           BorderSpacing.Left = 2
           Caption = 'Y'
           ParentFont = False
@@ -1308,10 +1308,10 @@ object GLForm1: TGLForm1
           AnchorSideLeft.Control = XTrackBar
           AnchorSideTop.Control = XTrackBar
           AnchorSideTop.Side = asrBottom
-          Left = 13
-          Height = 38
-          Top = 42
-          Width = 95
+          Left = 15
+          Height = 46
+          Top = 50
+          Width = 114
           Max = 1000
           Position = 1000
           TickStyle = tsNone
@@ -1325,10 +1325,10 @@ object GLForm1: TGLForm1
           AnchorSideLeft.Side = asrBottom
           AnchorSideTop.Control = YTrackBar
           AnchorSideTop.Side = asrCenter
-          Left = 110
-          Height = 38
-          Top = 42
-          Width = 95
+          Left = 131
+          Height = 46
+          Top = 50
+          Width = 114
           Max = 1000
           Position = 1000
           TickStyle = tsNone
@@ -1342,9 +1342,9 @@ object GLForm1: TGLForm1
           AnchorSideTop.Control = ZTrackBar
           AnchorSideTop.Side = asrCenter
           Left = 2
-          Height = 20
-          Top = 91
-          Width = 9
+          Height = 25
+          Top = 109
+          Width = 10
           BorderSpacing.Left = 2
           Caption = 'Z'
           ParentFont = False
@@ -1353,10 +1353,10 @@ object GLForm1: TGLForm1
           AnchorSideLeft.Control = XTrackBar
           AnchorSideTop.Control = YTrackBar
           AnchorSideTop.Side = asrBottom
-          Left = 13
-          Height = 38
-          Top = 82
-          Width = 95
+          Left = 15
+          Height = 46
+          Top = 98
+          Width = 114
           Max = 1000
           Position = 1000
           TickStyle = tsNone
@@ -1370,10 +1370,10 @@ object GLForm1: TGLForm1
           AnchorSideLeft.Side = asrBottom
           AnchorSideTop.Control = ZTrackBar
           AnchorSideTop.Side = asrCenter
-          Left = 110
-          Height = 38
-          Top = 82
-          Width = 95
+          Left = 131
+          Height = 46
+          Top = 98
+          Width = 114
           Max = 1000
           Position = 1000
           TickStyle = tsNone
@@ -1386,12 +1386,12 @@ object GLForm1: TGLForm1
           AnchorSideLeft.Control = X2TrackBar
           AnchorSideLeft.Side = asrBottom
           AnchorSideTop.Control = CutoutBox
-          Left = 207
-          Height = 31
-          Top = 5
-          Width = 85
+          Left = 247
+          Height = 37
+          Top = 6
+          Width = 102
           BorderSpacing.Left = 2
-          BorderSpacing.Top = 5
+          BorderSpacing.Top = 6
           Caption = 'Near'
           ParentFont = False
           TabOrder = 6
@@ -1402,12 +1402,12 @@ object GLForm1: TGLForm1
           AnchorSideLeft.Side = asrBottom
           AnchorSideTop.Control = CutNearBtn
           AnchorSideTop.Side = asrBottom
-          Left = 207
-          Height = 31
-          Top = 41
-          Width = 85
+          Left = 247
+          Height = 37
+          Top = 49
+          Width = 102
           BorderSpacing.Left = 2
-          BorderSpacing.Top = 5
+          BorderSpacing.Top = 6
           Caption = 'None'
           ParentFont = False
           TabOrder = 7
@@ -1416,15 +1416,15 @@ object GLForm1: TGLForm1
       end
       object MosaicBox: TGroupBox
         Left = 0
-        Height = 230
-        Top = 531
-        Width = 314
+        Height = 272
+        Top = 633
+        Width = 376
         Align = alTop
         AutoSize = True
         Caption = 'Mosaic'
-        ClientHeight = 205
-        ClientWidth = 310
-        Constraints.MinWidth = 12
+        ClientHeight = 242
+        ClientWidth = 372
+        Constraints.MinWidth = 14
         ParentFont = False
         TabOrder = 5
         object MosColLabel: TLabel
@@ -1432,9 +1432,9 @@ object GLForm1: TGLForm1
           AnchorSideTop.Control = MosColEdit
           AnchorSideTop.Side = asrCenter
           Left = 2
-          Height = 20
+          Height = 25
           Top = 6
-          Width = 57
+          Width = 70
           BorderSpacing.Left = 2
           Caption = 'Columns'
           ParentFont = False
@@ -1444,9 +1444,9 @@ object GLForm1: TGLForm1
           AnchorSideTop.Control = MosRowEdit
           AnchorSideTop.Side = asrCenter
           Left = 2
-          Height = 20
-          Top = 36
-          Width = 35
+          Height = 25
+          Top = 41
+          Width = 42
           Caption = 'Rows'
           ParentFont = False
         end
@@ -1454,10 +1454,10 @@ object GLForm1: TGLForm1
           AnchorSideLeft.Control = MosColLabel
           AnchorSideLeft.Side = asrBottom
           AnchorSideTop.Control = MosaicBox
-          Left = 61
-          Height = 28
+          Left = 74
+          Height = 33
           Top = 2
-          Width = 100
+          Width = 120
           BorderSpacing.Left = 2
           BorderSpacing.Top = 2
           MaxValue = 12
@@ -1471,10 +1471,10 @@ object GLForm1: TGLForm1
           AnchorSideLeft.Control = MosColEdit
           AnchorSideTop.Control = MosColEdit
           AnchorSideTop.Side = asrBottom
-          Left = 61
-          Height = 28
-          Top = 32
-          Width = 100
+          Left = 74
+          Height = 33
+          Top = 37
+          Width = 120
           BorderSpacing.Top = 2
           MaxValue = 12
           MinValue = 1
@@ -1488,10 +1488,10 @@ object GLForm1: TGLForm1
           AnchorSideLeft.Side = asrBottom
           AnchorSideTop.Control = MosColEdit
           AnchorSideTop.Side = asrCenter
-          Left = 163
-          Height = 38
-          Top = -3
-          Width = 115
+          Left = 196
+          Height = 46
+          Top = -5
+          Width = 138
           Max = 9
           Min = -9
           Position = -1
@@ -1506,10 +1506,10 @@ object GLForm1: TGLForm1
           AnchorSideLeft.Side = asrBottom
           AnchorSideTop.Control = MosRowEdit
           AnchorSideTop.Side = asrCenter
-          Left = 163
-          Height = 38
-          Top = 27
-          Width = 115
+          Left = 196
+          Height = 46
+          Top = 30
+          Width = 138
           Max = 9
           Min = -9
           Position = -1
@@ -1524,9 +1524,9 @@ object GLForm1: TGLForm1
           AnchorSideTop.Control = MosOrientDrop
           AnchorSideTop.Side = asrCenter
           Left = 2
-          Height = 20
-          Top = 71
-          Width = 75
+          Height = 25
+          Top = 82
+          Width = 89
           Caption = 'Orientation'
           ParentFont = False
         end
@@ -1535,13 +1535,13 @@ object GLForm1: TGLForm1
           AnchorSideLeft.Side = asrBottom
           AnchorSideTop.Control = MosRowOverlapTrack
           AnchorSideTop.Side = asrBottom
-          Left = 79
-          Height = 28
-          Top = 67
-          Width = 125
+          Left = 93
+          Height = 33
+          Top = 78
+          Width = 150
           BorderSpacing.Left = 2
           BorderSpacing.Top = 2
-          ItemHeight = 20
+          ItemHeight = 25
           ItemIndex = 0
           Items.Strings = (
             'Axial'
@@ -1560,9 +1560,9 @@ object GLForm1: TGLForm1
           AnchorSideTop.Control = MosOrientDrop
           AnchorSideTop.Side = asrBottom
           Left = 2
-          Height = 24
-          Top = 97
-          Width = 91
+          Height = 29
+          Top = 113
+          Width = 109
           BorderSpacing.Top = 2
           Caption = 'Cross Slice'
           Checked = True
@@ -1576,11 +1576,11 @@ object GLForm1: TGLForm1
           AnchorSideLeft.Side = asrBottom
           AnchorSideTop.Control = MosCrossCheck
           AnchorSideTop.Side = asrCenter
-          Left = 105
-          Height = 24
-          Top = 97
-          Width = 98
-          BorderSpacing.Left = 12
+          Left = 125
+          Height = 29
+          Top = 113
+          Width = 114
+          BorderSpacing.Left = 14
           Caption = 'Label Slices'
           Checked = True
           ParentFont = False
@@ -1588,56 +1588,59 @@ object GLForm1: TGLForm1
           TabOrder = 6
           OnChange = UpdateMosaic
         end
-        object MosaicText: TMemo
+        object ClinicalUseLabel: TMemo
           AnchorSideLeft.Control = MosaicBox
           AnchorSideTop.Control = MosCrossCheck
           AnchorSideTop.Side = asrBottom
           AnchorSideRight.Control = MosaicBox
           AnchorSideRight.Side = asrBottom
           Left = 0
-          Height = 82
-          Top = 123
-          Width = 310
+          Height = 98
+          Top = 144
+          Width = 372
           Anchors = [akTop, akLeft, akRight]
           BorderSpacing.Top = 2
-          Constraints.MaxHeight = 82
+          Constraints.MaxHeight = 98
+          Lines.Strings = (
+            'NOT FOR CLINICAL USE'
+          )
           ParentFont = False
           TabOrder = 7
-          OnChange = MosaicTextChange
+          OnChange = ClinicalUseLabelChange
         end
       end
     end
     object ScriptPanel: TPanel
-      Left = 1142
-      Height = 724
+      Left = 1371
+      Height = 869
       Top = 1
       Width = 2
       Align = alRight
       BevelOuter = bvNone
-      ClientHeight = 724
+      ClientHeight = 869
       ClientWidth = 2
       Constraints.MinWidth = 2
       ParentFont = False
       TabOrder = 1
       OnDblClick = ScriptPanelDblClick
       object ScriptBox: TGroupBox
-        Left = -10
-        Height = 724
+        Left = -12
+        Height = 869
         Top = 0
-        Width = 12
+        Width = 14
         Align = alClient
         Caption = 'Scripting'
-        ClientHeight = 699
-        ClientWidth = 8
-        Constraints.MinWidth = 12
+        ClientHeight = 839
+        ClientWidth = 10
+        Constraints.MinWidth = 14
         ParentFont = False
         TabOrder = 0
         OnDblClick = ScriptPanelDblClick
         object ScriptMemo: TMemo
           Left = 0
-          Height = 441
+          Height = 529
           Top = 0
-          Width = 8
+          Width = 10
           Align = alClient
           BorderStyle = bsNone
           Lines.Strings = (
@@ -1658,9 +1661,9 @@ object GLForm1: TGLForm1
         end
         object ScriptOutputMemo: TMemo
           Left = 0
-          Height = 250
-          Top = 449
-          Width = 8
+          Height = 300
+          Top = 539
+          Width = 10
           Align = alBottom
           BorderStyle = bsNone
           Lines.Strings = (
@@ -1675,33 +1678,33 @@ object GLForm1: TGLForm1
         object ScriptSplitter: TSplitter
           Cursor = crVSplit
           Left = 0
-          Height = 8
-          Top = 441
-          Width = 8
+          Height = 10
+          Top = 529
+          Width = 10
           Align = alBottom
           ResizeAnchor = akBottom
         end
       end
     end
     object LeftSplitter: TSplitter
-      Left = 336
-      Height = 724
+      Left = 403
+      Height = 869
       Top = 1
-      Width = 8
+      Width = 10
     end
     object RightSplitter: TSplitter
-      Left = 1134
-      Height = 724
+      Left = 1361
+      Height = 869
       Top = 1
-      Width = 8
+      Width = 10
       Align = alRight
       ResizeAnchor = akRight
     end
     object CenterPanel: TPanel
-      Left = 344
-      Height = 724
+      Left = 413
+      Height = 869
       Top = 1
-      Width = 790
+      Width = 948
       Align = alClient
       ParentFont = False
       TabOrder = 4
@@ -1711,40 +1714,40 @@ object GLForm1: TGLForm1
   object TBSplitter: TSplitter
     Cursor = crVSplit
     Left = 0
-    Height = 8
-    Top = 726
-    Width = 1145
+    Height = 10
+    Top = 871
+    Width = 1374
     Align = alBottom
     MinSize = 4
     ResizeAnchor = akBottom
   end
   object BottomPanel: TPanel
     Left = 0
-    Height = 100
-    Top = 734
-    Width = 1145
+    Height = 120
+    Top = 881
+    Width = 1374
     Align = alBottom
-    ClientHeight = 100
-    ClientWidth = 1145
+    ClientHeight = 120
+    ClientWidth = 1374
     ParentFont = False
     TabOrder = 2
     object ClusterGraphSplitter: TSplitter
-      Left = 1038
-      Height = 98
+      Left = 1246
+      Height = 118
       Top = 1
-      Width = 6
+      Width = 7
       Align = alRight
       MinSize = 6
       ResizeAnchor = akRight
     end
     object GraphPanel: TPanel
-      Left = 1044
-      Height = 98
+      Left = 1253
+      Height = 118
       Top = 1
-      Width = 100
+      Width = 120
       Align = alRight
-      Constraints.MinHeight = 8
-      Constraints.MinWidth = 10
+      Constraints.MinHeight = 10
+      Constraints.MinWidth = 12
       ParentFont = False
       PopupMenu = GraphPopUp
       TabOrder = 1
@@ -1752,21 +1755,21 @@ object GLForm1: TGLForm1
     end
     object ClusterPanel: TPanel
       Left = 1
-      Height = 98
+      Height = 118
       Top = 1
-      Width = 1037
+      Width = 1245
       Align = alClient
       Caption = 'Layer does not have clusters'
-      ClientHeight = 98
-      ClientWidth = 1037
+      ClientHeight = 118
+      ClientWidth = 1245
       Constraints.MinWidth = 2
       ParentFont = False
       TabOrder = 2
       object ClusterView: TListView
         Left = 1
-        Height = 96
+        Height = 116
         Top = 1
-        Width = 1035
+        Width = 1243
         Align = alClient
         AutoSort = False
         AutoWidthLastColumn = True
@@ -1774,49 +1777,49 @@ object GLForm1: TGLForm1
         Columns = <        
           item
             Caption = 'Index'
-            MaxWidth = 62
-            MinWidth = 62
+            MaxWidth = 74
+            MinWidth = 74
             Tag = 1
             Visible = False
-            Width = 62
+            Width = 74
           end        
           item
             Caption = 'Volume'
-            MaxWidth = 150
-            MinWidth = 100
+            MaxWidth = 180
+            MinWidth = 120
             Tag = 1
-            Width = 100
+            Width = 120
           end        
           item
             Caption = 'Peak'
             Tag = 1
-            Width = 100
+            Width = 120
           end        
           item
             Alignment = taCenter
             Caption = 'PeakXYZ'
-            MaxWidth = 225
-            MinWidth = 25
+            MaxWidth = 270
+            MinWidth = 30
             Tag = 2
-            Width = 150
+            Width = 180
           end        
           item
             Caption = 'Peak Structure'
-            MaxWidth = 250
-            MinWidth = 25
+            MaxWidth = 300
+            MinWidth = 30
             Tag = 2
-            Width = 150
+            Width = 180
           end        
           item
             Alignment = taCenter
             Caption = 'XYZ'
-            MaxWidth = 225
-            MinWidth = 25
-            Width = 150
+            MaxWidth = 270
+            MinWidth = 30
+            Width = 180
           end        
           item
             Caption = 'Structure'
-            Width = 385
+            Width = 463
           end>
         Constraints.MinWidth = 2
         GridLines = True
@@ -1837,8 +1840,8 @@ object GLForm1: TGLForm1
     end
   end
   object MainMenu: TMainMenu
-    Left = 640
-    Top = 20
+    Left = 768
+    Top = 24
     object AppleMenu: TMenuItem
       Caption = ''
       object AboutMenu: TMenuItem
@@ -2629,14 +2632,14 @@ object GLForm1: TGLForm1
       Caption = 'About Us'
       OnClick = MenuItem2Click
     end
-    object MenuItem3: TMenuItem
+    object LicenseMenuClick: TMenuItem
       Caption = 'License'
       OnClick = LicenseMenuClick
     end
   end
   object OpenDialog1: TOpenDialog
-    Left = 380
-    Top = 20
+    Left = 456
+    Top = 24
   end
   object ColorDialog1: TColorDialog
     Color = clBlack
@@ -2662,26 +2665,26 @@ object GLForm1: TGLForm1
       'ColorS=F0FBFF'
       'ColorT=A4A0A0'
     )
-    Left = 380
-    Top = 100
+    Left = 456
+    Top = 120
   end
   object SaveDialog1: TSaveDialog
     DefaultExt = '.png'
     Options = [ofNoReadOnlyReturn, ofEnableSizing, ofViewDetail]
-    Left = 380
-    Top = 184
+    Left = 456
+    Top = 221
   end
   object UpdateTimer: TTimer
     Enabled = False
     Interval = 100
     OnTimer = UpdateTimerTimer
-    Left = 510
-    Top = 20
+    Left = 612
+    Top = 24
   end
   object LayerPopup: TPopupMenu
     OnPopup = LayerPopupPopup
-    Left = 640
-    Top = 100
+    Left = 768
+    Top = 120
     object LayerUpMenu: TMenuItem
       Caption = 'Move Up'
       OnClick = LayerUpDownClick
@@ -2792,48 +2795,48 @@ object GLForm1: TGLForm1
   object ScriptOpenDialog: TOpenDialog
     DefaultExt = '.py'
     Filter = 'Python scripts|*.py'
-    Left = 380
-    Top = 270
+    Left = 456
+    Top = 324
   end
   object YokeTimer: TTimer
     Enabled = False
     Interval = 200
     OnTimer = YokeTimerTimer
-    Left = 510
-    Top = 450
+    Left = 612
+    Top = 540
   end
   object AnimateTimer: TTimer
     Enabled = False
     Interval = 100
     OnTimer = AnimateTimerTimer
-    Left = 510
-    Top = 184
+    Left = 612
+    Top = 221
   end
   object LayerWidgetChangeTimer: TTimer
     Enabled = False
     Interval = 200
     OnTimer = LayerWidgetChangeTimerTimer
-    Left = 510
-    Top = 100
+    Left = 612
+    Top = 120
   end
   object InvalidateTImer: TTimer
     Enabled = False
     Interval = 1
     OnTimer = InvalidateTImerTimer
-    Left = 510
-    Top = 270
+    Left = 612
+    Top = 324
   end
   object BetterRenderTimer: TTimer
     Enabled = False
     Interval = 500
     OnTimer = BetterRenderTimerTimer
-    Left = 510
-    Top = 360
+    Left = 612
+    Top = 432
   end
   object AfniPopup: TPopupMenu
     OnPopup = LayerPopupPopup
-    Left = 640
-    Top = 184
+    Left = 768
+    Top = 221
     object AfniDetailsMenu: TMenuItem
       Caption = 'Details'
       OnClick = AfniDetailsMenuClick
@@ -2857,8 +2860,8 @@ object GLForm1: TGLForm1
     end
   end
   object ClusterPopUp: TPopupMenu
-    Left = 640
-    Top = 270
+    Left = 768
+    Top = 324
     object ClusterCopyMenu: TMenuItem
       Caption = 'Copy table to clipboard'
       OnClick = ClusterSaveClick
@@ -2870,8 +2873,8 @@ object GLForm1: TGLForm1
     end
   end
   object GraphPopUp: TPopupMenu
-    Left = 640
-    Top = 365
+    Left = 768
+    Top = 438
     object GraphSaveTxtMenu: TMenuItem
       Caption = 'Save Graph as Text'
       OnClick = GraphSaveMenuClick

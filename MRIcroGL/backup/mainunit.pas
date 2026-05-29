@@ -148,6 +148,7 @@ type
     GraphLog10Menu: TMenuItem;
     MatCapDrop2: TComboBox;
     MenuItem2: TMenuItem;
+    MenuItem3: TMenuItem;
     MPR4Menu: TMenuItem;
     ScriptHaltMenu: TMenuItem;
     NimlMenu: TMenuItem;
@@ -270,7 +271,7 @@ type
     RemoveHazeMenu: TMenuItem;
     OpenRecentMenu: TMenuItem;
     MosLabelCheck: TCheckBox;
-    MosaicText: TMemo;
+    ClinicalUseLabel: TMemo;
     MosCrossCheck: TCheckBox;
     MosOrientDrop: TComboBox;
     CutNearBtn: TButton;
@@ -402,6 +403,9 @@ type
     X2TrackBar: TTrackBar;
     YTrackBar: TTrackBar;
     ZTrackBar: TTrackBar;
+
+    procedure LicenseMenuClick(Sender: TObject);
+   
     procedure AfniPMenuClick(Sender: TObject);
     procedure AfniQMenuClick(Sender: TObject);
     procedure CenterPanelClick(Sender: TObject);
@@ -580,7 +584,7 @@ type
     procedure LineColorBtnClick(Sender: TObject);
     //procedure LineColorOpacityTrackChange(Sender: TObject);
     procedure LineWidthEditChange(Sender: TObject);
-    procedure MosaicTextChange(Sender: TObject);
+    procedure ClinicalUseLabelChange(Sender: TObject);
     procedure OrientBtnClick(Sender: TObject);
     procedure RemoveHazeMenuClick(Sender: TObject);
     procedure ScriptingNewMenuClick(Sender: TObject);
@@ -4187,14 +4191,14 @@ begin
   if gPrefs.DarkMode then begin
      ScriptMemo.Color := clGray;
      ScriptOutputMemo.Color := clGray;
-     MosaicText.Color := clGray;
+     ClinicalUseLabel.Color := clGray;
      {$IFDEF GRAPH}
      gGraph.DarkColorScheme();
      {$ENDIF}
   end else begin
       ScriptMemo.Color := clDefault;
       ScriptOutputMemo.Color := clDefault;
-      MosaicText.Color := clDefault;
+      ClinicalUseLabel.Color := clDefault;
       {$IFDEF GRAPH}
       gGraph.GrayColorScheme();
       {$ENDIF}
@@ -4773,9 +4777,9 @@ begin
   ViewGPU1.Invalidate;
 end;
 
-procedure TGLForm1.MosaicTextChange(Sender: TObject);
+procedure TGLForm1.ClinicalUseLabelChange(Sender: TObject);
 begin
-     gPrefs.MosaicStr := MosaicText.Text;
+     gPrefs.MosaicStr := ClinicalUseLabel.Text;
      ViewGPU1.Invalidate;
 end;
 
@@ -4876,7 +4880,7 @@ for lRi := 1 to lR do begin
  if lRi < lR then
    lStr := lStr +'; ';
 end;//for each row
-MosaicText.Text := lStr;
+ClinicalUseLabel.Text := lStr;
 gPrefs.MosaicStr := lStr;
 ViewGPU1.Invalidate;
 end;
@@ -6973,10 +6977,24 @@ begin
   {$ENDIF}
 end;
 
+
 procedure TGLForm1.MenuItem2Click(Sender: TObject);
 begin
-  ShowMessage('MedVirtuso-MedMarvel Software Solutions');
+  ShowMessage(
+    'MedVirtuso: MedMarvel Software Solutions' + LineEnding + LineEnding +
+    'Version 1.0' + LineEnding + LineEnding +
+
+    
+    '© 2026 MedMarvel Software Solutions'
+  );
 end;
+
+procedure TGLForm1.LicenseMenuClick(Sender: TObject);
+begin
+  OpenURL('https://github.com/rordenlab/MRIcroGL?tab=License-1-ov-file');
+end;
+
+
 
 procedure TGLForm1.MenuItem3Click(Sender: TObject);
 begin
@@ -9902,6 +9920,23 @@ begin
  {$ENDIF}
  Vol1 := TGPUVolume.Create(ViewGPU1);
  {$ENDIF}
+
+ LayerDarkLabel.Visible := False;
+LayerDarkEdit.Visible := False;
+
+LayerBrightLabel.Visible := False;
+LayerBrightEdit.Visible := False;
+
+SliceBox.Visible := False;
+
+CoordLabel.Visible := False;
+XCoordEdit.Visible := False;
+YCoordEdit.Visible := False;
+ZCoordEdit.Visible := False;
+
+
+
+
 end;
 
 function TGLForm1.DefaultImage():string;
@@ -9938,6 +9973,7 @@ var
  shaderNames : TStringList;
  newMenu: TMenuItem;
 begin
+
  {$IFDEF LCLGTK2}{$IFDEF LINUX}
  writeln('If there is a long delay at launch, ensure full GTK2 install: "sudo apt-get install appmenu-gtk2-module"');
  {$ENDIF}{$ENDIF}
@@ -10259,6 +10295,11 @@ begin
   SetDisplayCheck();
   UpdateLayerBox(true);
   UpdateVisibleBoxes();
+
+  gPrefs.LabelOrient := false;
+  TextAndCubeMenu.Checked := false;
+
+
   UpdateOpenRecent();
   {$IFDEF METALAPI}
   if gPrefs.Quality1to5 = 5 then
@@ -10269,6 +10310,10 @@ begin
   if gPrefs.InitScript <> '' then
      UpdateTimer.Enabled:=true;
   ViewGPUPrepare(Sender);
+
+  Vol1.Slices.LabelOrient := false;
+
+
   {$ENDIF}
   if gPrefs.InitScript = '' then begin //update graph and caption
     XCoordEdit.Text := '0';
@@ -10276,6 +10321,34 @@ begin
     ZCoordEdit.Text := '0';
     SetXHairPosition(0,0,0 );
   end;
+
+// ===== MedVirtuso UI Cleanup =====
+
+// Hide contrast controls
+LayerDarkLabel.Visible := False;
+LayerDarkEdit.Visible := False;
+
+LayerBrightLabel.Visible := False;
+LayerBrightEdit.Visible := False;
+
+// Hide coordinate display
+CoordLabel.Visible := False;
+XCoordEdit.Visible := False;
+YCoordEdit.Visible := False;
+ZCoordEdit.Visible := False;
+
+// Hide 2D slice orientation buttons only
+SliceABtn.Visible := False;
+SlicePBtn.Visible := False;
+SliceLBtn.Visible := False;
+SliceRBtn.Visible := False;
+SliceSBtn.Visible := False;
+SliceIBtn.Visible := False;
+
+// Keep zoom controls visible
+ZoomBtn.Visible := True;
+SliceZoom.Visible := True;
+
   SetToolPanelMaxWidth();
   {$IFDEF METALAPI}
   //isFormShown := true;
@@ -10315,7 +10388,7 @@ begin
   UpdateColorbar();
   Vol1.SetTextContrast(gPrefs.ClearColor);
   Vol1.Slices.RadiologicalConvention := gPrefs.FlipLR_Radiological;
-  Vol1.Slices.LabelOrient := gPrefs.LabelOrient;
+  Vol1.Slices.LabelOrient := false;
   Vol1.Quality1to5 := gPrefs.Quality1to5;
   Vol1.Slices.LineWidth := gPrefs.LineWidth;
   Vol1.Slices.LineColor := Vec4(gPrefs.LineColor.R/255.0, gPrefs.LineColor.G/255.0, gPrefs.LineColor.B/255.0, gPrefs.LineColor.A/255.0);

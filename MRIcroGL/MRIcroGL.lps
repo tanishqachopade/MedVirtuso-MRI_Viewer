@@ -7,10 +7,11 @@
       <Unit0>
         <Filename Value="MRIcroGL.lpr"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="7"/>
-        <CursorPos X="60" Y="17"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <CursorPos X="10"/>
         <UsageCount Value="200"/>
+        <Loaded Value="True"/>
       </Unit0>
       <Unit1>
         <Filename Value="mainunit.pas"/>
@@ -155,9 +156,8 @@
       </Unit15>
       <Unit16>
         <Filename Value="nifti.pas"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="3"/>
-        <TopLine Value="7603"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="7605"/>
         <CursorPos X="6" Y="7613"/>
         <UsageCount Value="106"/>
         <Loaded Value="True"/>
@@ -171,7 +171,7 @@
       </Unit17>
       <Unit18>
         <Filename Value="glvolume2.pas"/>
-        <EditorIndex Value="4"/>
+        <EditorIndex Value="5"/>
         <TopLine Value="209"/>
         <CursorPos Y="212"/>
         <UsageCount Value="114"/>
@@ -179,7 +179,7 @@
       </Unit18>
       <Unit19>
         <Filename Value="nifti_foreign.pas"/>
-        <EditorIndex Value="1"/>
+        <EditorIndex Value="2"/>
         <TopLine Value="189"/>
         <CursorPos X="9" Y="205"/>
         <UsageCount Value="96"/>
@@ -377,7 +377,7 @@
       </Unit46>
       <Unit47>
         <Filename Value="vers.inc"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="3"/>
         <CursorPos X="22"/>
         <UsageCount Value="29"/>
         <Loaded Value="True"/>

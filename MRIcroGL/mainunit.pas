@@ -271,7 +271,7 @@ type
     RemoveHazeMenu: TMenuItem;
     OpenRecentMenu: TMenuItem;
     MosLabelCheck: TCheckBox;
-    MosaicText: TMemo;
+    ClinicalUseLabel: TMemo;
     MosCrossCheck: TCheckBox;
     MosOrientDrop: TComboBox;
     CutNearBtn: TButton;
@@ -584,7 +584,7 @@ type
     procedure LineColorBtnClick(Sender: TObject);
     //procedure LineColorOpacityTrackChange(Sender: TObject);
     procedure LineWidthEditChange(Sender: TObject);
-    procedure MosaicTextChange(Sender: TObject);
+    procedure ClinicalUseLabelChange(Sender: TObject);
     procedure OrientBtnClick(Sender: TObject);
     procedure RemoveHazeMenuClick(Sender: TObject);
     procedure ScriptingNewMenuClick(Sender: TObject);
@@ -4191,14 +4191,14 @@ begin
   if gPrefs.DarkMode then begin
      ScriptMemo.Color := clGray;
      ScriptOutputMemo.Color := clGray;
-     MosaicText.Color := clGray;
+     ClinicalUseLabel.Color := clGray;
      {$IFDEF GRAPH}
      gGraph.DarkColorScheme();
      {$ENDIF}
   end else begin
       ScriptMemo.Color := clDefault;
       ScriptOutputMemo.Color := clDefault;
-      MosaicText.Color := clDefault;
+      ClinicalUseLabel.Color := clDefault;
       {$IFDEF GRAPH}
       gGraph.GrayColorScheme();
       {$ENDIF}
@@ -4777,9 +4777,9 @@ begin
   ViewGPU1.Invalidate;
 end;
 
-procedure TGLForm1.MosaicTextChange(Sender: TObject);
+procedure TGLForm1.ClinicalUseLabelChange(Sender: TObject);
 begin
-     gPrefs.MosaicStr := MosaicText.Text;
+     gPrefs.MosaicStr := ClinicalUseLabel.Text;
      ViewGPU1.Invalidate;
 end;
 
@@ -4880,7 +4880,7 @@ for lRi := 1 to lR do begin
  if lRi < lR then
    lStr := lStr +'; ';
 end;//for each row
-MosaicText.Text := lStr;
+ClinicalUseLabel.Text := lStr;
 gPrefs.MosaicStr := lStr;
 ViewGPU1.Invalidate;
 end;
@@ -10348,6 +10348,14 @@ SliceIBtn.Visible := False;
 // Keep zoom controls visible
 ZoomBtn.Visible := True;
 SliceZoom.Visible := True;
+
+with TLabel.Create(Self) do
+begin
+  Parent := RulerCheck.Parent;
+  Left := 30;
+  Top := RulerCheck.Top + 500;
+  Caption := 'NOT FOR CLINICAL USE';
+end;
 
   SetToolPanelMaxWidth();
   {$IFDEF METALAPI}
