@@ -6090,7 +6090,7 @@ begin
           if not vols.Layer(i, v) then exit;
           if (v.IsLabels) or  (v.Header.datatype = kDT_RGBA32) or (v.Header.datatype = kDT_RGB) then continue;
           gClrbar.SetLUT(i, v.GetColorTable, v.DisplayMin, v.DisplayMax, v.CX.FromZero);
-          gClrbar.Number := gClrbar.Number + 1;
+          gClrbar.Number := 0;
       end;
   end;
   {$ENDIF}

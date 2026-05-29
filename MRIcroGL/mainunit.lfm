@@ -2488,6 +2488,7 @@ object GLForm1: TGLForm1
     end
     object ColorMenu: TMenuItem
       Caption = 'Color'
+      Visible = False
       object BackColorMenu: TMenuItem
         Caption = 'Back Color'
         OnClick = BackColorMenuClick
