@@ -148,6 +148,7 @@ type
     GraphLog10Menu: TMenuItem;
     MatCapDrop2: TComboBox;
     MenuItem2: TMenuItem;
+    MenuItem3: TMenuItem;
     MPR4Menu: TMenuItem;
     ScriptHaltMenu: TMenuItem;
     NimlMenu: TMenuItem;

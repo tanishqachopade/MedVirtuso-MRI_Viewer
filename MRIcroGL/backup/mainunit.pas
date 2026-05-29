@@ -147,6 +147,7 @@ type
     GraphLognMenu: TMenuItem;
     GraphLog10Menu: TMenuItem;
     MatCapDrop2: TComboBox;
+    MenuItem2: TMenuItem;
     MPR4Menu: TMenuItem;
     ScriptHaltMenu: TMenuItem;
     NimlMenu: TMenuItem;
@@ -445,6 +446,7 @@ type
     procedure LayerSmoothMenuClick(Sender: TObject);
     procedure DrawDilateMenuClick(Sender: TObject);
     procedure MatCapDrop2Change(Sender: TObject);
+    procedure MenuItem2Click(Sender: TObject);
     procedure MenuItem3Click(Sender: TObject);
     procedure NimlMenuClick(Sender: TObject);
     procedure RemoveSmallClusterMenuClick(Sender: TObject);
@@ -658,6 +660,7 @@ type
     procedure PyModInitialization(Sender: TObject);
     {$ELSE}
     procedure GotPythonData(str: UnicodeString);
+    procedure ViewMenuClick(Sender: TObject);
     {$ENDIF}
     {$ENDIF}
     procedure YokeMenuClick(Sender: TObject);
@@ -3505,6 +3508,11 @@ begin
     end else
       gPythonData += str[i];
   end;
+end;
+
+procedure TGLForm1.ViewMenuClick(Sender: TObject);
+begin
+
 end;
 
 function TGLForm1.PyCreate: boolean;
@@ -6963,6 +6971,11 @@ begin
   Vol1.SetMatCap(MatCapDrop2.Items[MatCapDrop2.ItemIndex], false);
    ViewGPU1.Invalidate;
   {$ENDIF}
+end;
+
+procedure TGLForm1.MenuItem2Click(Sender: TObject);
+begin
+  ShowMessage('MedVirtuso-MedMarvel Software Solutions');
 end;
 
 procedure TGLForm1.MenuItem3Click(Sender: TObject);
