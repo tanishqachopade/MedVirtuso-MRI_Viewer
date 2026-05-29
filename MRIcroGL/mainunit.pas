@@ -402,6 +402,7 @@ type
     X2TrackBar: TTrackBar;
     YTrackBar: TTrackBar;
     ZTrackBar: TTrackBar;
+   
     procedure AfniPMenuClick(Sender: TObject);
     procedure AfniQMenuClick(Sender: TObject);
     procedure CenterPanelClick(Sender: TObject);
@@ -6973,9 +6974,16 @@ begin
   {$ENDIF}
 end;
 
+
 procedure TGLForm1.MenuItem2Click(Sender: TObject);
 begin
-  ShowMessage('MedVirtuso-MedMarvel Software Solutions');
+  ShowMessage(
+    'MedVirtuso: MedMarvel Software Solutions' + LineEnding + LineEnding +
+    'Version 1.0' + LineEnding + LineEnding +
+
+    
+    '© 2026 MedMarvel Software Solutions'
+  );
 end;
 
 procedure TGLForm1.MenuItem3Click(Sender: TObject);

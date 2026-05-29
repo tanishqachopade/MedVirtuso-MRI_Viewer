@@ -144,7 +144,7 @@ object GLForm1: TGLForm1
           AnchorSideTop.Side = asrBottom
           Left = 0
           Height = 28
-          Top =  LayerList.Top + LayerList.Height + 10;
+          Top =  95
           Width = 171
           BorderSpacing.Top = 5
           ItemHeight = 20
@@ -176,7 +176,7 @@ object GLForm1: TGLForm1
           AnchorSideRight.Side = asrBottom
           Left = 152
           Height = 38
-          Top = LayerColorDrop.Top + 35;
+          Top = 150
           Width = 145
           Max = 100
           Position = 100
@@ -187,7 +187,7 @@ object GLForm1: TGLForm1
           TabOrder = 5
           OnMouseUp = LayerAlphaTrackMouseUp
         end
-        object LayerOptionsBtn: TSpeedButton
+        object LayerOptionsBtn: TButton
           AnchorSideLeft.Control = LayerColorDrop
           AnchorSideLeft.Side = asrBottom
           AnchorSideTop.Control = LayerColorDrop
@@ -2630,6 +2630,9 @@ object GLForm1: TGLForm1
       Caption = 'About Us'
       OnClick = MenuItem2Click
     end
+
+  
+
   end
   object OpenDialog1: TOpenDialog
     Left = 380
