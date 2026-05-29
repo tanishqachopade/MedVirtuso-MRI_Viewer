@@ -1,0 +1,16 @@
+# Lazarus / FPC
+MRIcroGL/lib/x86_64-win64/
+MRIcroGL/backup/
+
+*.ppu
+*.o
+*.obj
+*.or
+*.a
+*.compiled
+
+*.exe
+*.dll
+
+*.bak
+*.~*
